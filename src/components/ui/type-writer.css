@@ -1,0 +1,15 @@
+.typewriter::after {
+  content: var(--cursor, "|");
+  color: black; /* Cursor color */
+  animation: blink-cursor 1s steps(2) infinite;
+}
+
+@keyframes blink-cursor {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

@@ -79,7 +79,6 @@ export default function Introduction() {
               variant="default"
               size="heading"
               className="dark:text-white transition-colors bg-gradient-to-r from-blue-500 to-purple-500 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600"
-              asChild
               onClick={() => {
                 window.scrollTo({
                   top:

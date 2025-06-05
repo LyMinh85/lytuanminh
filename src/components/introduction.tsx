@@ -18,7 +18,6 @@ export default function Introduction() {
   const texts = [
     "turns ideas into beautiful websites.",
     "turns caffeine into code.",
-    "clean code & creative solutions.",
     "loves solving problems.",
     "enjoys building web applications.",
   ];

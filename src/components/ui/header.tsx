@@ -41,7 +41,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="/resumes/Ly-Tuan-Minh-Resume-04-06-2025.pdf"
+                href="/Resumes/Ly-Tuan-Minh-Resume-04-06-2025.pdf"
                 className="hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"

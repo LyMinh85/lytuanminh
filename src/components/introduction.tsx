@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import Header from "@/components/ui/header";
 import { motion } from "motion/react";
-import Link from "next/link";
 import AnimateTypeWriter from "./animated/animate-type-writer";
 
 const animation = {
@@ -36,17 +35,11 @@ export default function Introduction() {
             }}
             className="text-2xl md:text-6xl font-black text-center"
           >
-            <motion.span
-              variants={animation}
-              className="inline-block"
-            >
+            <motion.span variants={animation} className="inline-block">
               {`Hello, I'm Minh `}
             </motion.span>
             <br />
-            <motion.span
-              variants={animation}
-              className="inline-block"
-            >
+            <motion.span variants={animation} className="inline-block">
               {`I'm a `}
             </motion.span>{" "}
             <motion.span
@@ -55,10 +48,7 @@ export default function Introduction() {
             >
               web developer
             </motion.span>{" "}
-            <motion.span
-              variants={animation}
-              className="inline-block"
-            >
+            <motion.span variants={animation} className="inline-block">
               {` who`}
             </motion.span>
             <br />
@@ -90,10 +80,15 @@ export default function Introduction() {
               size="heading"
               className="dark:text-white transition-colors bg-gradient-to-r from-blue-500 to-purple-500 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600"
               asChild
+              onClick={() => {
+                window.scrollTo({
+                  top:
+                    document.getElementById("freelance-work")?.offsetTop || 0,
+                  behavior: "smooth",
+                });
+              }}
             >
-              <Link href="#freelance-work" scroll={true}>
-                View Projects
-              </Link>
+              View Projects
             </Button>
           </motion.div>
         </div>

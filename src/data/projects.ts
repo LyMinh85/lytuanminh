@@ -7,7 +7,7 @@ import { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     id: "doctruyen",
-    title: "Dịch Trung Việt - Vietphrase",
+    title: "Translate Chinese to Vietnamese",
     description:
       "A web platform that translates Chinese content into Vietnamese using the Vietphrase method directly on the client-side. It also supports full webpage translation by providing a URL.",
     image: "/projects/doctruyen-thumbnail.webp",

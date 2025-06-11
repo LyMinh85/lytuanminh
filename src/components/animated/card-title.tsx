@@ -25,7 +25,7 @@ export const CardTitle = ({ project, isSelected }: TitleProps) => {
       transformTemplate={scaleTranslate}
       style={{ originX: 0, originY: 0 }}
     >
-      <h2>{project.title}</h2>
+    <h2 className="my-2 text-white">{project.title}</h2>
       <TechStackBadges techStack={project.techStack} />
     </motion.div>
   );

@@ -11,7 +11,7 @@ import { projects } from "@/data/projects";
  */
 const SECTION_UI = {
   title: {
-    className: "text-5xl font-bold text-center mb-16",
+    className: "text-5xl font-bold text-center mb-16 text-black dark:text-white",
     text: "Pet Projects"
   },
   grid: {

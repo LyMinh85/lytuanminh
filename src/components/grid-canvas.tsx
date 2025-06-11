@@ -34,18 +34,18 @@ const GridCanvas = () => {
     if (!canvasRef.current) return;
 
     let numberOfColumns = 15; // số cột
-    let gridSize = canvasRef.current.clientWidth / numberOfColumns; // chỉnh kích thước ô vuông ở đây
+    let gridSize = window.innerWidth / numberOfColumns; // chỉnh kích thước ô vuông ở đây
     if (gridSize < 80) {
       // Tính toán kích thước ô vuông tối thiểu
       numberOfColumns = 5;
-      gridSize = canvasRef.current.clientWidth / numberOfColumns;
+      gridSize = window.innerWidth / numberOfColumns;
     }
 
     const resizeCanvas = () => {
       // get kich thước của tag canvas
       if (!canvasRef.current) return;
-      const width = canvasRef.current.clientWidth;
-      const height = canvasRef.current.clientHeight;
+      const width = window.innerWidth;
+      const height = window.innerHeight;
 
       // set kích thước của canvas
       canvas.width = width;
@@ -165,7 +165,7 @@ const GridCanvas = () => {
         top: 0,
         left: 0,
         width: "100%",
-        height: "100%",
+        height: "100vh",
         zIndex: -1,
         opacity: isMobile ? 0.5 : 1, // giảm độ mờ cho thiết bị di động
         backgroundColor: resolvedTheme === "dark" ? "#111827" : "#F9FAFB", // màu nền canvas

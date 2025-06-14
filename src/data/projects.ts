@@ -16,6 +16,10 @@ export const projects: Project[] = [
         type: "website",
         url: "https://doctruyen.space/dich-trung-viet",
       },
+      {
+        type: "github",
+        url: "https://github.com/LyMinh85/doctruyen",
+      }
     ],
     classNameGrid: "col-span-1 lg:col-span-3 row-span-2",
     useColorBackgroundThumbnail: true,

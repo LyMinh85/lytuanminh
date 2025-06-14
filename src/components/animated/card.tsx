@@ -55,6 +55,7 @@ export const Card = memo(
         className={cn(`rounded-3xl relative h-80 lg:h-full`, className)}
         style={{
           pointerEvents: isSelected ? "auto" : "none",
+          cursor: isSelected ? "default" : "pointer",
         }}
         onClick={handleOpenCard}
       >
@@ -71,32 +72,34 @@ export const Card = memo(
             ref={cardRef}
             className={cn(
               "card-content rounded-3xl",
-              CARD_UI.backgroundColor.light, 
+              CARD_UI.backgroundColor.light,
               CARD_UI.backgroundColor.dark
             )}
             layout
-            transition={isSelected ? ANIMATION_SPRING.open : ANIMATION_SPRING.close}
+            transition={
+              isSelected ? ANIMATION_SPRING.open : ANIMATION_SPRING.close
+            }
             onUpdate={checkZIndex}
           >
             <motion.div layout className="card-image-container">
               <CardImage project={project} isSelected={isSelected} />
               <CardTitle project={project} isSelected={isSelected} />
-              
-              <CloseButton 
-                isSelected={isSelected} 
-                isDarkThumbnail={!!project.isDarkColorThumbnail} 
+
+              <CloseButton
+                isSelected={isSelected}
+                isDarkThumbnail={!!project.isDarkColorThumbnail}
                 onClose={handleCloseCard}
               />
             </motion.div>
-            
+
             <CardContent project={project} />
           </motion.div>
         </div>
       </div>
-    );  },
+    );
+  },
   (prev, next) =>
-    prev.isSelected === next.isSelected && 
-    prev.project.id === next.project.id
+    prev.isSelected === next.isSelected && prev.project.id === next.project.id
 );
 
 Card.displayName = "Card";
